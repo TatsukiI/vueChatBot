@@ -18,14 +18,12 @@ export default {
   components: {
     chatBalloon
   },
-  data: function () {
-    return {
-      chatLogs: [
-        {id: 1, me: true, msg: 'hello chatbot!'},
-        {id: 2, me: false, msg: 'hello human!'}
-      ]
+  props: {
+    chatLogs: {
+      type: Array,
+      required: false
     }
-  }
+  },
 }
 </script>
 

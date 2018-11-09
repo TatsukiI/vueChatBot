@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="msg" placeholder="なにか聞いてね！">
+    <input type="text" v-model="msg" @change="sendMsg" placeholder="なにか聞いてね！">
     <chat-button @click="sendMsg" v-bind:button-name = "buttonName"></chat-button>
   </div>
 </template>
@@ -20,8 +20,9 @@ export default {
   },
   methods: {
     sendMsg: function () {
-      alert(this.msg+'sendingMessageが発火しました')
+      //alert(this.msg+'sendingMessageが発火しました')
       this.$emit('sendingMessage', this.msg)
+      this.msg = ''
     }
   }
 }

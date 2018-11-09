@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     clearChatBody: function () {
-      alert('clearChatBodyが発火しました')
+      //salert('clearChatBodyが発火しました')
       this.$emit('clearChatBody')
     }
   }
